@@ -18,8 +18,11 @@
                 {{article.text}}
             </p>
         </div>
-
+        
+        <!-- create a link to show this one article only -->
+        <a href="{% url 'article' article.pk %}">
         <img src="{{article.image_url}}" alt="">
+        </a>
         
     </article>
     <hr>
