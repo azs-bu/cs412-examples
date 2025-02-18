@@ -21,3 +21,24 @@ class Article(models.Model):
     def get_absolute_url(self):
         '''Return the URL to display one instance of this model.'''
         return reverse('article', kwargs={'pk':self.pk})
+    
+    def get_all_comments(self):
+        '''Return a QuerySet of comments about this article.'''
+        # use the object manager to retrieve comments about this article
+        comments = Comment.objects.filter(article=self)
+        return comments
+
+    
+class Comment(models.Model):
+    '''Encapsulate the idea of a Comment about an Article'''
+
+    # data attributes for the Comment:
+    article = models.ForeignKey(Article, on_delete=models.CASCADE)
+    author = models.TextField(blank=False)
+    text = models.TextField(blank=False)
+    published = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        '''Return a string representation of this Comment.'''
+        return f'{self.text}'
+
