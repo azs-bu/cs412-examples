@@ -137,3 +137,10 @@ STATICFILES_DIRS = [
 # declarations to reference media files
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 MEDIA_URL = "/media/"
+
+import socket
+CS_DEPLOYMENT_HOSTNAME = 'cs-webapps.bu.edu'
+
+if socket.gethostname() == CS_DEPLOYMENT_HOSTNAME:
+    STATIC_URL = '/azs/cs412/static/'
+    MEDIA_URL = '/azs/cs412/media/'
