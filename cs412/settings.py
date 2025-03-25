@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "hw", 
     "formdata", 
-    "blog", # NEW
+    "blog", 
+    "marathon_analytics", # NEW
 ]
 
 MIDDLEWARE = [

@@ -33,7 +33,7 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr;
     background:aliceblue;
-    position: fixed;
+    /* position: fixed; */
     top: 0px;
     z-index: 999;
     /* padding-right: 50px auto; */
@@ -105,20 +105,20 @@ nav button {
     font-size: 1.2 em;
 }
 
-.mc-table {
+.table {
     display: table;
     width: 100%;
     table-layout: fixed;
 }
 
 
-.mc-table-head {
+.table-head {
     border: 1px dashed darkblue;    /*border around each row */
     display: table-row;
     font-size: 1.2em;
 }
 
-.mc-table-head .detail {
+.table-head .detail {
     display: table-cell;
     color:darkblue;
     font-weight: bold;
@@ -128,46 +128,46 @@ nav button {
    
 }
 
-.mc-table-row  {
+.row  {
     display: table-row;
     border: 1px dashed darkblue;    /*border around each row */
     background-color: white;
 }
 
 
-.mc-table-row .detail {
+.row .detail {
     color:darkblue;
     display: table-cell;
    
     padding: 5px;
 }
 
-.mc-table-row .detail img {
+.row .detail img {
     max-height: 75px;
     align-content: right;
 }
 
 /* must have no space before :hover */
-.mc-table-row:hover {
+.row:hover {
     background-color: aliceblue;    
     border: 1px solid;
 }
 
-.site-form {
+.form {
     margin-top: 10px;
     /* border: 2px solid darkblue; */
     padding: 10px;
 }
 
-/* style the forms with class site-form */
-.site-form input, .site-form textarea, .site-form select {
+/* style the forms with class form */
+.form input, .form textarea, .form select {
     display: block;
     margin: 5px 0 0 0;
     padding: 5px;
 }
 
 /* style the submit button ; didn't quite work?? */
-.site-form input [type="submit"] {
+.form input [type="submit"] {
     background: slategray;
     border: 0;
     color: fff;
